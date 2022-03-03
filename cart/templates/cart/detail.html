@@ -4,7 +4,7 @@
     Your shopping cart
 {% endblock %}
 {% block content %}
-    <h1>Your shopping cart</h1>
+    <h1>Your shopping Cart</h1>
     <table class="cart">
         <thead>
         <tr>
@@ -17,7 +17,7 @@
         </tr>
         </thead>
         <tbody>
-        {% for item in cart %}
+        {% for item in Cart %}
             {% with product=item.product %}
                 <tr>
                     <td>
@@ -41,7 +41,7 @@
         <tr class="total">
             <td>Total</td>
             <td colspan="4"></td>
-            <td class="num">${{ cart.get_total_price }}</td>
+            <td class="num">${{ Cart.get_total_price }}</td>
         </tr>
         </tbody>
     </table>
